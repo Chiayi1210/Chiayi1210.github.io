@@ -36,6 +36,45 @@
         text-align: center; /* 置中文字 */
         font-weight: bold; /* 文字加粗 */
     }
+       /* 自定義導航欄樣式 */
+       .navbar-nav .nav-item .nav-link {
+            color: #000;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #007bff;
+        }
+        /* 自定義下拉選單樣式 */
+        .dropdown-menu {
+            display: none; /* 初始隱藏 */
+            position: absolute; /* 絕對定位 */
+            left: 0; /* 對齊父元素的左側 */
+            top: 100%; /* 放在父元素下方 */
+            background-color: #fff;
+            border: 1px solid #ddd; /* 明顯的邊框 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown-menu .dropdown-item {
+            color: #000;
+            font-weight: bold;
+        }
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+        .dropdown-menu .dropdown-item:focus {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+        /* 當懸停在.nav-item時顯示下拉選單 */
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+        /* 確保下拉選單正確對齊 */
+        .nav-item {
+            position: relative; /* 設置父元素為相對定位 */
+        }
+   
 </style>
 <body>
 
@@ -45,8 +84,7 @@
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
           <span>
-            <h>思安格基金會</h>
-            <p>Think Again</p>
+            <h>思安格基金會<br>Think Again</h>
           </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,19 +98,36 @@
                 <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about"> 關於思安格</a>             
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> 關於思安格</a> 
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#link1">連結1</a></li>
+                  <li><a class="dropdown-item" href="#link2">連結2</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#furniture">資訊新知</a>
+                <a class="nav-link" href="furniture.html">資訊新知</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#link1">連結1</a></li>
+                  <li><a class="dropdown-item" href="#link2">連結2</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#blog">活動布告欄</a>
+                <a class="nav-link" href="blog.html">活動布告欄</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#link1">連結1</a></li>
+                  <li><a class="dropdown-item" href="#link2">連結2</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">贊助支持</a>
+                <a class="nav-link" href="support.html">贊助支持</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#link1">連結1</a></li>
+                  <li><a class="dropdown-item" href="#link2">連結2</a></li>
+                </ul>
               </li>
                <li class="nav-item">
-                <a class="nav-link" href="#contact">聯絡我們</a>
+                <a class="nav-link" href="contact.html">聯絡我們</a>
               </li>
             </ul>
           </div>
